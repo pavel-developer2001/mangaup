@@ -186,3 +186,34 @@ body {
     }
   }
 }
+
+/*Footer*/
+
+.footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+  @extend %contentPadding;
+  background-color: $componentColor;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  &__logo{
+    padding-top: 0px;
+  }
+  &__list{
+    &-item{
+      padding-left: 5px;
+      cursor: pointer;
+      @extend %styleText;
+    }
+  }
+  &__info{
+    &-item{
+      color: $gray;
+      @extend %styleText;
+      &-main{
+        @extend %titleText;
+      }
+    }
+  }
+}
