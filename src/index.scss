@@ -4,6 +4,8 @@ $bodyColor: #060B0E;
 $componentColor: #12212B;
 $textColor: #E0E0E0;
 $gray: #BDBDBD;
+$colorCard : #1F3847;
+$activeColor: #2F80ED;
 
 /*Fonts*/
 %styleText {
@@ -15,14 +17,25 @@ $gray: #BDBDBD;
   font-weight: bold;
 }
 %titleText {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
 }
 %titleDate {
   font-size: 14px;
   font-weight: 400;
 }
-
+%titleManga {
+  font-size: 25px;
+  font-weight: bold;
+}
+%titleMangaV2 {
+  font-size: 19px;
+  font-weight: 400;
+}
+%fontSmall {
+  font-size: 12px;
+  font-weight: 400;
+}
 
 body {
   margin: 0;
@@ -215,5 +228,147 @@ body {
         @extend %titleText;
       }
     }
+  }
+}
+
+/*TitlePage*/
+.title-page{
+  padding-top: 35px;
+  @extend %contentPadding;
+  display:flex;
+  &__img{
+    padding-right: 15px;
+    border-radius: 8px;
+    width: 233px;
+    height: 328px;
+  }
+  &__head{
+    &-name{
+      display: block;
+      padding-top: 10px;
+      padding-bottom: 5px;
+      @extend %titleManga;
+    }
+    &-foreign{
+      @extend %titleMangaV2;
+    }
+    &-infopop{
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 20px;
+      align-items: center;
+      &-text{
+        @extend %titleText;
+        padding-left: 5px;
+      }
+      &-rating{
+        padding: 10px;
+        @extend %titleText;
+      }
+    }
+  }
+}
+
+/*TitlePageContent*/
+.title-page-content{
+  background-color: $componentColor;
+  border-radius: 4px;
+  width: 75%;
+}
+$grey: #9e9e9e;
+$num-of-tabs: 3;
+@mixin tabs {
+  @for $i from 1 through $num-of-tabs {
+    &:nth-of-type(#{$i}) {
+      &:checked {
+        ~ .slide {
+          // left: calc((100% / #{$num-of-tabs}) * #{$i - 1});
+          left: calc((35% / #{$num-of-tabs}) * #{$i - 1});
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+.tab-wrap {
+  // width: 50%;
+//   margin-left: 20%;
+   position: relative;
+   display: flex;
+//   top: -106px;
+ }
+
+input[type="radio"][name="tabs"] {
+  position: absolute;
+  z-index: -1;
+  &:checked {
+    + .tab-label-content {
+      label {
+        color: $activeColor;
+      }
+      .tab-content {
+        display: block;
+      }
+    }
+  }
+  @include tabs;
+  &:first-of-type {
+    &:checked {
+      ~ .slide {
+        left: 0;
+      }
+    }
+  }
+}
+
+label {
+  cursor: pointer;
+  color: rgba(255,255,255,0.8);
+  background-color: $componentColor;
+  // box-sizing: border-box;
+  display: flex;
+  @extend %mainText;
+  align-items: center;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+  //height: 56px;
+  transition: color 0.2s ease;
+  // width: 50%;
+}
+
+.slide {
+  background: $activeColor;
+  width: calc(30% / #{$num-of-tabs});
+  // width: calc(100% / #{$num-of-tabs});
+  height: 4px;
+  position: absolute;
+  left: 0;
+  top: calc(100%);
+  transition: left 0.3s ease-out;
+}
+
+.tab-label-content {
+  // width: 50%;
+  .tab-content {
+    background-color: $componentColor;
+    position: absolute;
+    left: 0px;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    padding: 40px 0 90px 10%;
+  }
+  .tab-wrap {
+    width: 80%;
+    margin-left: 10%;
+    top: -106px;
   }
 }
