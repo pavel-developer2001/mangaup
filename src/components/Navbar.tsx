@@ -8,7 +8,7 @@ const Navbar = () => {
             </svg>
             <div className='navbar__list'>
                 <span className="navbar__list-item">Каталог</span>
-                <span className="navbar__list-item">Топ 100</span>
+                <span className="navbar__list-item">Рейтинг</span>
             </div>
             <div className='navbar__search'>
                 <svg className='navbar__search-icon' width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">

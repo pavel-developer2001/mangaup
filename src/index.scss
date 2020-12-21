@@ -527,3 +527,71 @@ $grey: #9e9e9e;
     }
   }
 }
+
+.title-component{
+  text-align: center;
+  font-size: 30px;
+}
+/*Rating Page*/
+.rating-page{
+  @extend %contentPadding;
+}
+
+/*GridList*/
+.grid-list{
+  padding-bottom: 50px;
+  display: flex;
+  // width: 100%;
+  flex-wrap: wrap;
+  &-item{
+    cursor: pointer;
+    display: flex;
+    background-color: $colorCard;
+    border-radius: 4px;
+    width: max-content;
+    margin-top: 25px;
+    margin-left: 35px;
+    flex-basis: 50%;
+    flex-grow: 0;
+    max-width: 44%;
+    &__img{
+      width: 174px;
+      height: 212px;
+      border-radius: 8px;
+    }
+    &__content{
+      padding-left: 20px;
+      padding-right: 20px;
+      &-number{
+        color:$gray;
+        @extend %titleManga;
+        display: block;
+        margin-left: 98%;
+        margin-top: 6px;
+      }
+      &-type{
+        color:$gray;
+        @extend %styleText;
+        text-transform: uppercase;
+      }
+      &-name{
+        @extend %titleText;
+      }
+      &-params{
+        display: flex;
+        align-items: center;
+        padding-top: 40px;
+        &-count{
+          @extend %mainText;
+          padding-left: 3px;
+        }
+        &-love{
+          padding-left: 20px;
+        }
+        &-watch{
+          padding-left: 20px;
+        }
+      }
+    }
+  }
+}

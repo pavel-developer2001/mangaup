@@ -1,17 +1,17 @@
 import React from 'react'
-import SliderListItem from './SliderListItem'
+import CardListItem from './CardListItem'
 
 const SliderList = () => {
     return (
         <div className="slider-list">
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
-            <SliderListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
+            <CardListItem />
         </div>
     )
 }
