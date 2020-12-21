@@ -541,7 +541,6 @@ $grey: #9e9e9e;
 .grid-list{
   padding-bottom: 50px;
   display: flex;
-  // width: 100%;
   flex-wrap: wrap;
   &-item{
     cursor: pointer;
@@ -594,4 +593,156 @@ $grey: #9e9e9e;
       }
     }
   }
+}
+
+/*CatalogPage*/
+.catalog-page{
+  @extend %contentPadding;
+  &__title{
+    padding-top: 5px;
+  }
+  &__head{
+    background-color: $colorCard;
+    border-radius: 4px;
+    &-params{
+      display: flex;
+      padding-left: 38%;
+      padding-bottom: 20px;
+      &-block{
+        background-color: $bodyColor;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-left: 15px;
+        padding: 8px;
+        &-item{
+          @extend %titleMangaV2;
+          &-icon{
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  &__body{
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    &-filter{
+      cursor: pointer;
+      &-name{
+        @extend %titleText;
+      }
+      &-icon{
+        padding-left: 5px;
+      }
+    }
+    &-layout{
+      &-btn{
+        border: none;
+        background-color: $bodyColor;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/*PersonPage*/
+.person-page{
+  @extend %contentPadding;
+  &__head{
+    background-color: $colorCard;
+    padding: 20px 10px 20px 30px;
+    border-radius: 4px;
+    display: flex;
+    &-avatar{
+      &-img{
+        width: 126px;
+        height: 134px;
+        border-radius: 60px;
+        z-index: 1;
+      }  
+      &-icon{
+        background-color: $textColor;
+        padding: 3px;
+        border-radius: 9px;
+        cursor: pointer;
+        margin-right: -25px;
+        z-index: 2;
+      }
+    }
+    &-content{
+      padding-left: 30px;
+      &-name{
+        display: block;
+        font-size: 30px;
+        font-weight: bold;
+      }
+      &-status{
+        @extend %titleManga;
+      }
+      &-rang{
+        color: $gray;
+        @extend %titleText;
+        padding-left: 8px;
+      }
+      &-count{
+        display: flex;
+        margin-top: 7px;
+        &-progress{
+          background-color: $activeColor;
+          padding: 5px;
+          border-radius: 8px;
+          &-chap{
+            @extend %mainText;
+          }
+          &-counts{
+            color: $gray;
+            @extend %styleText;
+            padding-left: 5px;
+          }
+        }
+        &-money{
+          background-color: $componentColor;
+          padding: 5px;
+          border-radius: 8px;    
+          margin-left: 20px;
+          &-counts{
+            @extend %mainText;
+          }
+        }
+      }
+      &-btns{  
+        padding-top: 25px;
+      }
+      &-btn{
+        background-color: $componentColor;
+        border: 1px solid $activeColor;
+        color: $activeColor;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 8px;
+        @extend %mainText;
+        &-icon{
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+  &__body{
+    padding-left: 15%;
+    padding-top: 20px;
+    &-label{
+      background-color: $bodyColor;
+    }
+    &-content{
+      
+      &-container{
+        background-color: $bodyColor;
+      }
+    }
+  }
+}
+
+.second{
+  margin-left: 15px;
 }
