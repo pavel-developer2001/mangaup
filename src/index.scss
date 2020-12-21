@@ -95,7 +95,7 @@ body {
     }
   }
   &__register{
-    padding-left: 24%;
+    
     &-login{
       cursor: pointer;
     }
@@ -108,11 +108,47 @@ body {
     }
   }
   &__colors{
+    padding-right: 40px;
+    padding-left: 24%;
     border: none;
     background-color: $componentColor;
     cursor: pointer;
     height: 23px;
     width: 23px;
+  }
+  &__params{
+    display: flex;
+    border-left: 3px solid;
+  }
+  &__avatar{
+    width: 39px;
+    height: 36px;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  &__notifications{
+    display: flex;
+    padding-left: 10px;
+    padding-right: 30px;
+    &-count{
+      background-color: $activeColor;
+      font-weight: 400;
+      height: fit-content;
+      padding: 2px;
+      border-radius: 17px;
+      margin-left: -13px;
+    }
+    &-btn{
+      border: none;
+      background-color: $componentColor;
+      cursor: pointer;
+    }
+  }
+  &__history{
+    border: none;
+    background-color: $componentColor;
+    cursor: pointer;
+    padding-left: 15px;
   }
 }
 
@@ -745,4 +781,22 @@ $grey: #9e9e9e;
 
 .second{
   margin-left: 15px;
+}
+
+/*ProfileParams*/
+.profile-params{
+  position: absolute;
+  right: 3%;
+  background-color: $bodyColor;
+  border: 1px solid $activeColor;
+  border-radius: 4px;
+  padding: 5px 10px;
+  &__setting{
+    cursor: pointer;
+    &-name{
+      @extend %styleText;
+      margin-left: 5px;
+      font-size: 16px;
+    }
+  }
 }
