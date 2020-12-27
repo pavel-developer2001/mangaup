@@ -2,7 +2,7 @@ import React from 'react'
 import GridList from '../components/GridList'
 import SliderList from '../components/SliderList'
 
-const CatalogPage = () => {
+const CatalogPage: React.FC = () => {
 
     const DATA_VIEW_MODES = {
         TABLE: "table",
@@ -11,7 +11,7 @@ const CatalogPage = () => {
 
     const [dataView, setDataView] = React.useState(DATA_VIEW_MODES.GRID)
 
-    const handleChangeView = (_, nextView) => {
+    const handleChangeView:any = (_:any, nextView:any) => {
           setDataView(nextView);
     }
   
@@ -47,7 +47,7 @@ const CatalogPage = () => {
                     <path d="M1.41 0L6 4.58L10.59 0L12 1.41L6 7.41L0 1.41L1.41 0Z" fill="#E0E0E0"/>
                     </svg>
                 </div>
-                <div className='catalog-page__body-layout' value={dataView} onChange={handleChangeView}>
+                <div className='catalog-page__body-layout' onChange={handleChangeView}>
                     <button value={DATA_VIEW_MODES.GRID} aria-label={DATA_VIEW_MODES.GRID} className='catalog-page__body-layout-btn' type='button'>
                         <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 9.6H2.22222V6.4H0V9.6ZM0 16H2.22222V12.8H0V16ZM0 3.2H2.22222V0H0V3.2ZM4.44444 9.6H20V6.4H4.44444V9.6ZM4.44444 16H20V12.8H4.44444V16ZM4.44444 0V3.2H20V0H4.44444Z" fill="#BDBDBD"/>
