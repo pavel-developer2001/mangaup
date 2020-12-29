@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ChapterSidebar = () => {
     return (
@@ -60,7 +61,8 @@ const ChapterPage = () => {
                         </svg>
                         Назад
                     </button>
-                    <span className="chapter-page__content-navigator-title">К тайтлу</span>
+                    <Link to='/title'><span className="chapter-page__content-navigator-title">К тайтлу</span></Link>
+                    
                     <button className="chapter-page__content-navigator-btn">
                         Вперёд
                         <svg className="chapter-page__content-navigator-btn-iconRight" width="12" height="17" viewBox="0 0 12 17" fill="none" xmlns="http://www.w3.org/2000/svg">

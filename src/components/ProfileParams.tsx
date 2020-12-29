@@ -1,13 +1,17 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const ProfileParams = () => {
     return (
         <div className="profile-params">
             <div className='profile-params__setting'>
-                <svg className='profile-params__setting-icon' width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6 6.5C7.6575 6.5 9 5.04563 9 3.25C9 1.45438 7.6575 0 6 0C4.3425 0 3 1.45438 3 3.25C3 5.04563 4.3425 6.5 6 6.5ZM6 8.125C3.9975 8.125 0 9.21375 0 11.375V13H12V11.375C12 9.21375 8.0025 8.125 6 8.125Z" fill="#E0E0E0"/>
-                </svg>
-                <span className='profile-params__setting-name'>Мой профиль </span>
+                <Link to='/person'>
+                   <svg className='profile-params__setting-icon' width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 6.5C7.6575 6.5 9 5.04563 9 3.25C9 1.45438 7.6575 0 6 0C4.3425 0 3 1.45438 3 3.25C3 5.04563 4.3425 6.5 6 6.5ZM6 8.125C3.9975 8.125 0 9.21375 0 11.375V13H12V11.375C12 9.21375 8.0025 8.125 6 8.125Z" fill="#E0E0E0"/>
+                    </svg>
+                    <span className='profile-params__setting-name'>Мой профиль </span> 
+                </Link>
+                
             </div>
             <div className='profile-params__setting'>
                 <svg className='profile-params__setting-icon' width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg">
