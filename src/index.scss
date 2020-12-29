@@ -901,3 +901,125 @@ $grey: #9e9e9e;
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/*ChapterPage*/
+.chapter-page{
+  display: flex;
+  position: relative;
+  &__content{
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    &-img{
+      width: 900px;
+    }
+    &-end{
+      background-color: $colorCard;
+      &-title{
+        @extend %titleManga;
+      }
+      &-speak{
+        @extend %titleText;
+      }
+      &-btn{
+        background-color: $bodyColor;
+        border-radius: 8px;
+        border: none;
+        @extend %titleText;
+        color: $textColor;
+        cursor: pointer;
+        font-size: 18px;
+        &-icon{
+          padding-left: 3px;
+          padding-top: 5px;
+        }
+      }
+      &-foot{
+        padding-top: 10px;
+        padding-bottom: 20px;
+        &-thank{
+          @extend %titleMangaV2;
+        }
+        &-count{
+          @extend %titleMangaV2;
+          color : $gray;
+          padding-left: 10px;
+        }
+      }
+    }
+    &-translate{
+      background-color: $colorCard;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      text-align: left;
+      padding: 10px;
+      &-title{
+        @extend %titleManga;
+      }
+      &-cont{
+        display: flex;
+        padding-top: 10px;
+        &-img{
+          border-radius: 8px;
+          width: 85px;
+          height: 85px;
+        }
+        &-text{
+          padding-left: 10px;
+          padding-top: 28px;
+          @extend %titleText;
+        }
+      }
+    }
+    &-navigator{
+      background-color: $colorCard;
+      border-radius: 4px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      &-title{
+        cursor: pointer;
+        @extend %titleText;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      &-btn{
+        cursor: pointer;
+        @extend %titleText;
+        color: $textColor;
+        background-color: $colorCard;
+        border: none;
+        &-iconLeft{
+          padding-right: 4px;
+        }
+        &-iconRight{
+          margin: -3px;
+          padding-left: 8px;
+        }
+      }
+    }
+  }
+}
+.chapter-sidebar{
+  background-color: $colorCard;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  &__count{
+    display:block;
+    @extend %titleText;
+    padding-top: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &__btn{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    background-color: $colorCard;
+    border: none;
+    cursor: pointer;
+    display: block;
+  }
+}
